@@ -20,7 +20,7 @@
     "wait-on": "3.3.0"
   },
   "build": {
-    "appId: "com.example.app",
+    "appId": "com.example.app",
     "productName": "App",
     "win": {
       "icon": "build/icon.ico"
