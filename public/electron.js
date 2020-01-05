@@ -1,6 +1,4 @@
-const electron = require("electron");
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+const {app, BrowserWindow, ipcMain} = require("electron");
 
 const path = require("path");
 const isDev = require("electron-is-dev");
@@ -8,7 +6,13 @@ const isDev = require("electron-is-dev");
 let mainWindow;
 
 function createWindow() {
-  mainWindow = new BrowserWindow({ width: 900, height: 680, webPreferences: { nodeIntegration: true }});
+  mainWindow = new BrowserWindow({
+     width: 900, 
+     height: 680, 
+     webPreferences: { 
+       nodeIntegration: true 
+      }
+    });
   mainWindow.loadURL(
     isDev
       ? "http://localhost:3000"
